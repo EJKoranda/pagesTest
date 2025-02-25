@@ -4,10 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chickens</title>
-    <link rel="stylesheet" href="styles.css"> </head>
+    <link rel="stylesheet" href="styles.css">
+</head>
 <body>
     <h1>Chickens!</h1>
     <img src="chickenImage.jpg" alt="A photo of a chicken">
-    <p>Chickens are domesticated birds raised for food. They're social animals living in flocks and communicate through sounds and behaviors.</p>
+    <p id="chicken-paragraph">Chickens are domesticated birds raised for food. They're social animals living in flocks and communicate through sounds and behaviors.</p>
+
+    <script>
+        const paragraph = document.getElementById("chicken-paragraph");
+        const colors = ["red", "blue", "green", "orange", "purple", "brown", "teal", "pink", "gray", "yellow"];
+
+        function changeColor() {
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            paragraph.style.color = randomColor;
+        }
+
+        setInterval(changeColor, 2000);
+    </script>
 </body>
 </html>
